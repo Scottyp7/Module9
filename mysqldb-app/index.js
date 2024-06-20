@@ -2,16 +2,17 @@ const express = require("express");
 const app = express();
 
 require("dotenv").config();
-require("./dbConnect.js")
 
+let userRoutes = require('./routes/userRoutes');
+app.use('/api/users', userRoutes);
+
+let dbConnect = require("../mysqldb-app/dbConnect")
 // parse requests of content-type - application/json
 app.use(express.json());
 
-let userRoutes = require('./routes/userRoutes');
-app.use('/api/Users', userRoutes);
 
     app.get("/", (req, res) => {
-        res.json({ message: "Welcome to myMongoDB application." });
+        res.json({ message: "Welcome to mySQLDB application." });
     });
 
 
