@@ -1,0 +1,51 @@
+[
+      {
+        "day": "1",
+        "temperature": "14 °C",
+        "wind speed": "9 km/h",
+        "wind direction":"south east",
+        "sun description":"sunny intervals"
+      },
+      {
+        "day": "2",
+        "temperature": "15 °C",
+        "wind speed": "28 km/h",
+        "wind direction":"south east",
+        "sun description":"sunny"
+      },
+      {
+        "day": "3",
+        "temperature": "18 °C",
+        "wind speed": "17 km/h",
+        "wind direction":"south east",
+        "sun description":"cloudy"
+      },
+      {
+        "day": "4",
+        "temperature": "14 °C",
+        "wind speed": "9 km/h",
+        "wind direction":"south east",
+        "sun description":"sunny intervals"
+      },
+      {
+        "day": "5",
+        "temperature": "15 °C",
+        "wind speed": "28 km/h",
+        "wind direction":"south east",
+        "sun description":"sunny"
+      },
+      {
+        "day": "6",
+        "temperature": "18 °C",
+        "wind speed": "17 km/h",
+        "wind direction":"south east",
+        "sun description":"cloudy"
+      },    
+      {
+        "day": "7",
+        "temperature": "18 °C",
+        "wind speed": "17 km/h",
+        "wind direction":"south east",
+        "sun description":"cloudy"
+      }
+]

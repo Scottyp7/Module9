@@ -19,4 +19,4 @@ module.exports = mongoose.model("user", userSchema)
 // The first argument is the singular name of your collection.
 // Mongoose automatically looks for the lowercase plural version.For example, if you use
 // const MyModel = mongoose.model('Ticket', mySchema);
-// Then MyModel will use the tickets collection, not the Ticket collection.
+// Then MyModel will use the tickets collection, not the Ticket collection. 

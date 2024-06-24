@@ -8,7 +8,7 @@ require("./dbConnect.js")
 app.use(express.json());
 
 let userRoutes = require('./routes/userRoutes');
-app.use('/api/Users', userRoutes);
+app.use('/api', userRoutes);
 
     app.get("/", (req, res) => {
         res.json({ message: "Welcome to myMongoDB application." });

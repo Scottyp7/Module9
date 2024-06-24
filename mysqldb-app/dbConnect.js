@@ -3,12 +3,8 @@ const {Sequelize} = require("sequelize")
 // SQL queries, relying instead on their models to do it for you
 console.log(process.env.DB_NAME)
 const sequelize = new Sequelize(
-    process.env.DB_NAME,
-    process.env.DB_USER, 
-    process.env.DB_PASSWORD, {
-    host: process.env.DB_HOST,
-    dialect: 'mysql'
-});
+    "mysql://avnadmin:AVNS_Ex7kuL6JIRuI_ADeLcc@mysql-28893212-database1module8.l.aivencloud.com:11535/database1"
+);
 const connectMysql = async () => {
     try {
         await sequelize.authenticate();

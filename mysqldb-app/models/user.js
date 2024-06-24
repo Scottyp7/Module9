@@ -29,3 +29,13 @@ User.init({
     }
 )
 module.exports = User;
+
+/*
+      {
+        "firstName":"scott",
+        "lastName":"parker",
+        "emailId":"asdasd@asd.com",
+        "password":"asasdasd"
+      }
+
+*/
