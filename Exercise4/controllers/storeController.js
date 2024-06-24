@@ -1,14 +1,17 @@
 const express = require('express')
 
 function getProducts(req, res){
-    
     fetch('https://fakestoreapi.com/products?limit=3')
-        .then(res=>res.json())
-        .then(json=>console.log(json))
+        .then((response) => {
+                console.log(response.json()); 
+                res.status(200); 
+                res.json({"Result" : response.data})})
+        //.then(json=>console.log(json))
 }
-function postProducts(req, res){
 
-fetch('https://fakestoreapi.com/products',{
+
+function postProducts(req, res){
+    fetch('https://fakestoreapi.com/products',{
             method:"POST",
             body:JSON.stringify(
                 req.body
@@ -18,8 +21,8 @@ fetch('https://fakestoreapi.com/products',{
             .then(json=>console.log(json))
     }
 
-    function putProducts(req, res){
 
+function putProducts(req, res){
     fetch(`https://fakestoreapi.com/products/${req.params.id}`,{
             method:"PUT",
             body:JSON.stringify(

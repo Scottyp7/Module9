@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
  router.put('/:id', (req, res) => {
      controllers.putProducts(req, res)
  })
- 
+
  router.delete('/:id', (req, res) => {
      controllers.deleteProducts(req, res)
  })
