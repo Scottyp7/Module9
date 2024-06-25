@@ -54,5 +54,61 @@
         "windDirection":"south east",
         "sunDescription":"cloudy",
         "LocationID":1
+      },
+      {
+        "day": "21/05/2024",
+        "temperature": "14 °C",
+        "windSpeed": "9 km/h",
+        "windDirection":"south east",
+        "sunDescription":"sunny intervals",
+        "LocationID":1
+      },
+      {
+        "day": "22/05/2024",
+        "temperature": "15 °C",
+        "windSpeed": "28 km/h",
+        "windDirection":"south east",
+        "sunDescription":"sunny",
+        "LocationID":1
+      },
+      {
+        "day": "23/05/2024",
+        "temperature": "18 °C",
+        "windSpeed": "17 km/h",
+        "windDirection":"south east",
+        "sunDescription":"cloudy",
+        "LocationID":2
+      },
+      {
+        "day": "24/05/2024",
+        "temperature": "14 °C",
+        "windSpeed": "9 km/h",
+        "windDirection":"south east",
+        "sunDescription":"sunny intervals",
+        "LocationID":2
+      },
+      {
+        "day": "25/05/2024",
+        "temperature": "15 °C",
+        "windSpeed": "28 km/h",
+        "windDirection":"south east",
+        "sunDescription":"sunny",
+        "LocationID":2
+      },
+      {
+        "day": "19/05/2024",
+        "temperature": "18 °C",
+        "windSpeed": "17 km/h",
+        "windDirection":"south east",
+        "sunDescription":"cloudy",
+        "LocationID":1
+      },    
+      {
+        "day": "20/05/2024",
+        "temperature": "18 °C",
+        "windSpeed": "17 km/h",
+        "windDirection":"south east",
+        "sunDescription":"cloudy",
+        "LocationID":1
       }
 ]
