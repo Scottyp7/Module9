@@ -3,21 +3,22 @@ const app = express();
 
 require("dotenv").config();
 
-let dayRoutes = require('./routes/dayRoutes');
-let sunRoutes = require('./routes/sunRoutes')
-let tempRoutes = require('./routes/tempRoutes')
-let windRoutes = require('./routes/windRoutes')
+let dayRoutes = require('../myapisql-app/routes/dayRoutes');
+let locationRoutes = require('../myapisql-app/routes/locationRoutes')
+let countryRoutes = require('../myapisql-app/routes/countryRoutes')
+
 
 app.use(express.json());
 
-app.use('/api/users', dayRoutes);
-app.use('/api/sun', sunRoutes);
-app.use('/api/temp', tempRoutes);
-app.use('/api/wind', windRoutes);
+app.use('/days', dayRoutes);
+app.use('/locations', locationRoutes);
+app.use('/countries', countryRoutes);
 
+// Database must connect before any data is added
 let dbConnect = require("../mysqldb-app/dbConnect")
-// parse requests of content-type - application/json
 
+//Data being added to the database
+let populateDB = require('../myapisql-app/populateDB')
 
 
     app.get("/", (req, res) => {
@@ -32,3 +33,14 @@ const PORT = process.env.PORT || 8080;
         console.log(`Server is running on port${PORT}.`);
     });
 
+/*       
+    {
+        "day": "20/06/1992",
+        "temperature": "122 °C",
+        "windSpeed": "92 km/h",
+        "windDirection":"south east",
+        "sunDescription":"sunny intervals",
+        "LocationID":1
+    }
+
+*/

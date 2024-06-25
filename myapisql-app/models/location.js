@@ -3,21 +3,30 @@ let dbConnect = require("../dbConnect");
 const sequelizeInstance = dbConnect.Sequelize;
 
 
-class Sun extends Model { }
+class Location extends Model { }
 // Sequelize will create this table if it doesn't exist on startup
-Sun.init({
-    id: {
+Location.init({
+    ID: {
         type: DataTypes.INTEGER, allowNull: false, autoIncrement:
             true, primaryKey: true
     },
-    description: {
+    city: {
         type: DataTypes.STRING, allowNull: false, required: true
-    },
+    }
 },
     {
-        sequelize: sequelizeInstance, modelName: 'suns', // uselowercase plural format
-        timestamps: true, freezeTableName: true
+        sequelize: sequelizeInstance, modelName: 'locations', // uselowercase plural format
+        timestamps: false, freezeTableName: true
     }
 )
+module.exports = Location;
 
-module.exports = Sun;
+/*
+      {
+        "firstName":"scott",
+        "lastName":"parker",
+        "emailId":"asdasd@asd.com",
+        "password":"asasdasd"
+      }
+
+*/

@@ -1,9 +1,9 @@
 "use strict";
 const Models = require("../models");
 
-// DAYS
-const getDays = (res) => {
-    Models.Day.findAll({}).then(data => {
+// Locations
+const getCountries = (res) => {
+    Models.Country.findAll({}).then(data => {
         res.send({ result: 200, data: data });
     }).catch(err => {
         console.log(err);
@@ -11,8 +11,8 @@ const getDays = (res) => {
     })
 }
 
-const createDay = (data, res) => {
-    Models.Day.create(data).then(data => {
+const createCountry = (data, res) => {
+    Models.Country.create(data).then(data => {
         res.send({ result: 200, data: data });
     }).catch(err => {
         console.log(err);
@@ -20,8 +20,8 @@ const createDay = (data, res) => {
     })
 }
 
-const updateDay = (req, res) => {
-    Models.Day.update(req.body, {
+const updateCountry = (req, res) => {
+    Models.Country.update(req.body, {
         where: { id: req.params.id },
         returning: true
     })
@@ -33,8 +33,8 @@ const updateDay = (req, res) => {
         });
 };
 
-const deleteDay = (req, res) => {
-    Models.Day.destroy({ where: { id: req.params.id } })
+const deleteCountry = (req, res) => {
+    Models.Country.destroy({ where: { id: req.params.id } })
         .then(data => {
             res.send({ result: 200, data: data });
         }).catch((err) => {
@@ -43,6 +43,8 @@ const deleteDay = (req, res) => {
         });
 };
 
+
 module.exports = {
-    deleteDay,getDays,updateDay,createDay,getDays
+
+    deleteCountry,updateCountry,createCountry,getCountries
 };

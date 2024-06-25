@@ -1,15 +1,21 @@
 const express = require("express");
+
 const app = express();
 
 require("dotenv").config();
 
-let userRoutes = require('./routes/userRoutes');
-app.use('/api/users', userRoutes);
+let dayRoutes = require('../myapisql-app/routes/dayRoutes');
+let locationRoutes = require('../myapisql-app/routes/locationRoutes');
+let countryRoutes = require('../myapisql-app/routes/countryRoutes')
+
 
 let dbConnect = require("./dbConnect")
+
 // parse requests of content-type - application/json
 app.use(express.json());
-
+app.use('/days', dayRoutes);
+app.use('/locations', locationRoutes);
+app.use('/countries', countryRoutes);
 
     app.get("/", (req, res) => {
         res.json({ message: "Welcome to mySQLDB application." });

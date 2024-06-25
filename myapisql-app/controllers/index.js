@@ -1,3 +1,5 @@
 module.exports = {
-    userController: require('./dayController')
+    dayController: require('./dayController'),
+    locationController: require('./locationController'),
+    countryController: require('./countryController')
  }

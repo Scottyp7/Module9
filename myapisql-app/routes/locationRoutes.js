@@ -5,19 +5,19 @@ const Controllers = require("../controllers");
 // matches GET requests sent to /api/users
 // (the prefix from server.js)
 router.get('/', (req, res) => {
-   Controllers.userController.getWinds(res);
+   Controllers.locationController.getLocations(res);
 })
 
-// matches POST requests sent to /api/users/create
 router.post('/create', (req, res) => {
-   Controllers.userController.createWind(req.body, res)
+   Controllers.locationController.createLocation(req.body, res)
 })
 
 router.put('/:id', (req, res) => {
-    Controllers.userController.updateWind(req, res)
+    Controllers.locationController.updateLocation(req, res)
 })
+
 router.delete('/:id', (req, res) => {
-    Controllers.userController.deleteWind(req, res)
+    Controllers.locationController.deleteLocation(req, res)
 })
 
 module.exports = router;

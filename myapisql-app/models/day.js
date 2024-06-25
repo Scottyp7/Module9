@@ -6,30 +6,29 @@ const sequelizeInstance = dbConnect.Sequelize;
 class Day extends Model { }
 // Sequelize will create this table if it doesn't exist on startup
 Day.init({
-    id: {
+    ID: {
         type: DataTypes.INTEGER, allowNull: false, autoIncrement:
             true, primaryKey: true
     },
-    date: {
+        day: {
         type: DataTypes.STRING, allowNull: false, required: true
-    }, city: {
+    }, 
+        windDirection: {
+        type: DataTypes.STRING, allowNull: false, required: true
+    }, 
+        windSpeed: {
+        type: DataTypes.STRING, allowNull: false, required: true
+    }, 
+        sunDescription: {
+        type: DataTypes.STRING, allowNull: false, required: true
+    },        
+        temperature: {
         type: DataTypes.STRING, allowNull: false, required: true,
-        unique: true
-    }
-},
+    }  },
     {
         sequelize: sequelizeInstance, modelName: 'days', // uselowercase plural format
-        timestamps: true, freezeTableName: true
+        timestamps: false, freezeTableName: true
     }
 )
 module.exports = Day;
 
-/*
-      {
-        "firstName":"scott",
-        "lastName":"parker",
-        "emailId":"asdasd@asd.com",
-        "password":"asasdasd"
-      }
-
-*/

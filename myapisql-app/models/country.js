@@ -3,24 +3,30 @@ let dbConnect = require("../dbConnect");
 const sequelizeInstance = dbConnect.Sequelize;
 
 
-class Wind extends Model { }
+class Country extends Model { }
 // Sequelize will create this table if it doesn't exist on startup
-Wind.init({
-    id: {
+Country.init({
+    ID: {
         type: DataTypes.INTEGER, allowNull: false, autoIncrement:
             true, primaryKey: true
     },
-    speed: {
-        type: DataTypes.STRING, allowNull: false, required: true
-    },
-    direction: {
+    country: {
         type: DataTypes.STRING, allowNull: false, required: true
     }
 },
     {
-        sequelize: sequelizeInstance, modelName: 'winds', // uselowercase plural format
-        timestamps: true, freezeTableName: true
+        sequelize: sequelizeInstance, modelName: 'country', // uselowercase plural format
+        timestamps: false, freezeTableName: true
     }
 )
+module.exports = Country;
 
-module.exports =  Wind;
+/*
+      {
+        "firstName":"scott",
+        "lastName":"parker",
+        "emailId":"asdasd@asd.com",
+        "password":"asasdasd"
+      }
+
+*/

@@ -1,51 +1,58 @@
 [
       {
-        "day": "1",
+        "day": "13/05/2024",
         "temperature": "14 °C",
-        "wind speed": "9 km/h",
-        "wind direction":"south east",
-        "sun description":"sunny intervals"
+        "windSpeed": "9 km/h",
+        "windDirection":"south east",
+        "sunDescription":"sunny intervals",
+        "LocationID":1
       },
       {
-        "day": "2",
+        "day": "14/05/2024",
         "temperature": "15 °C",
-        "wind speed": "28 km/h",
-        "wind direction":"south east",
-        "sun description":"sunny"
+        "windSpeed": "28 km/h",
+        "windDirection":"south east",
+        "sunDescription":"sunny",
+        "LocationID":1
       },
       {
-        "day": "3",
+        "day": "15/05/2024",
         "temperature": "18 °C",
-        "wind speed": "17 km/h",
-        "wind direction":"south east",
-        "sun description":"cloudy"
+        "windSpeed": "17 km/h",
+        "windDirection":"south east",
+        "sunDescription":"cloudy",
+        "LocationID":1
       },
       {
-        "day": "4",
+        "day": "17/05/2024",
         "temperature": "14 °C",
-        "wind speed": "9 km/h",
-        "wind direction":"south east",
-        "sun description":"sunny intervals"
+        "windSpeed": "9 km/h",
+        "windDirection":"south east",
+        "sunDescription":"sunny intervals",
+        "LocationID":1
       },
       {
-        "day": "5",
+        "day": "18/05/2024",
         "temperature": "15 °C",
-        "wind speed": "28 km/h",
-        "wind direction":"south east",
-        "sun description":"sunny"
+        "windSpeed": "28 km/h",
+        "windDirection":"south east",
+        "sunDescription":"sunny",
+        "LocationID":1
       },
       {
-        "day": "6",
+        "day": "19/05/2024",
         "temperature": "18 °C",
-        "wind speed": "17 km/h",
-        "wind direction":"south east",
-        "sun description":"cloudy"
+        "windSpeed": "17 km/h",
+        "windDirection":"south east",
+        "sunDescription":"cloudy",
+        "LocationID":1
       },    
       {
-        "day": "7",
+        "day": "20/05/2024",
         "temperature": "18 °C",
-        "wind speed": "17 km/h",
-        "wind direction":"south east",
-        "sun description":"cloudy"
+        "windSpeed": "17 km/h",
+        "windDirection":"south east",
+        "sunDescription":"cloudy",
+        "LocationID":1
       }
 ]

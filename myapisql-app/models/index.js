@@ -1,39 +1,28 @@
 'use strict'
 const Day = require('./day') //require the model
-const Sun = require('./sun')
-const Temp = require('./temp')
-const Wind = require('./wind')
+const Location = require('./location')
+const Country = require('./country')
 
 
 async function init() {
 
-    Day.hasMany(Sun, {foreignKey: 'sunId'})
-    Day.hasMany(Temp, {foreignKey: 'tempId'})
-    Day.hasMany(Wind, {foreignKey: 'windId'})
-    Sun.belongsTo(Day)
-    Temp.belongsTo(Day)
-    Wind.belongsTo(Day)
-
-
-    Sun.hasMany(Temp, {foreignKey: 'tempId'})
-    Temp.hasMany(Wind, {foreignKey: 'windId'})
-    Temp.belongsTo(Sun)
-    Wind.belongsTo(Temp)
-
-
+    Country.hasMany(Location, {foreignKey: 'countryID'})
+    Location.hasMany(Day, {foreignKey: 'LocationID'})
+    
+    Day.belongsTo(Location)
+    Location.belongsTo(Country)
+    
+    // AWAIT is used to create tables in the database if they dont already exist.
     await Day.sync()
-    await Sun.sync()
-    await Temp.sync()
-    await Wind.sync(); // sync the model
-    // also sync any extra models here
+    await Location.sync()
+    await Country.sync()
+
 };
 
 init();
 
 module.exports = {
     Day, 
-    Sun, 
-    Temp, 
-    Wind // export the model
-    // also export any extra models here
+    Location,
+    Country
 };
